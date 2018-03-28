@@ -4,7 +4,7 @@
   if(Hls.isSupported()) {
     var video = document.getElementById('video');
     var hls = new Hls();
-    hls.loadSource('https://hehestreams.com/nba/games/H8acUs/streams/800.m3u8?gt=1&hst=OmZEz7B8d2ZZzGa29pLqxrK1');
+    hls.loadSource('https://neunlds312.akamaized.net/nlds/nba/lal/as/live/nlncp/lal_hd.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
@@ -14,7 +14,7 @@
  // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
  // This is using the built-in support of the plain video element, without using hls.js.
   else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://hehestreams.com/nba/games/H8acUs/streams/800.m3u8?gt=1&hst=OmZEz7B8d2ZZzGa29pLqxrK1';
+    video.src = 'https://neunlds312.akamaized.net/nlds/nba/lal/as/live/nlncp/lal_hd.m3u8';
     video.addEventListener('canplay',function() {
       video.play();
     });
