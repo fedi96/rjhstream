@@ -1,24 +1,10 @@
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<video with="100%" height="100%" id="video"></video>
+<script src="//rjh.fun/vjs.js">
+</script>
+<video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls>
+  <source src="http://neunlds312.akamaized.net/nlds/nba/lal/as/live/nlncp/lal_hd.m3u8" type="application/x-mpegURL"></video>
+<script>(function(){window.hola_player();})();
+</script>
 <script>
-  if(Hls.isSupported()) {
-    var video = document.getElementById('video');
-    var hls = new Hls();
-    hls.loadSource('https://neunlds312.akamaized.net/nlds/nba/lal/as/live/nlncp/lal_hd.m3u8');
-    hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      video.play();
-  });
- }
- // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
- // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
- // This is using the built-in support of the plain video element, without using hls.js.
-  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://neunlds312.akamaized.net/nlds/nba/lal/as/live/nlncp/lal_hd.m3u8';
-    video.addEventListener('canplay',function() {
-      video.play();
-    });
-  }
   (function(open){
     XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
       if(url.indexOf('key')!=-1){rewrittenUrl = "https://rjh.fun/keyn.txt?url="+ btoa(url);}
